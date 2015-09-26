@@ -6,4 +6,7 @@
   <packaging>pom</packaging>
   <name>Sistema de Apadrinhamento</name>
   <description>Sistema de Apadrinhamento</description>
+  <modules>
+  	<module>sistema-apadrinhamento-ws</module>
+  </modules>
 </project>
