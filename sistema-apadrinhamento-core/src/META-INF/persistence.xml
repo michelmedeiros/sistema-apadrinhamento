@@ -12,6 +12,13 @@
 		<jta-data-source>java:jboss/datasources/APADRINHAMENTO_DB</jta-data-source>
 
 		<class>br.com.atendimento.entidades.Padrinho</class>
+		<class>br.com.atendimento.entidades.Crianca</class>
+		<class>br.com.atendimento.entidades.Contato</class>
+		<class>br.com.atendimento.entidades.Doacao</class>
+		<class>br.com.atendimento.entidades.Endereco</class>
+		<class>br.com.atendimento.entidades.DebitoAutomatico</class>
+		<class>br.com.atendimento.entidades.DebitoCartao</class>
+		
 
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
@@ -20,3 +27,4 @@
 		</properties>
 	</persistence-unit>
 </persistence>
+

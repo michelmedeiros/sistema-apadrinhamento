@@ -12,6 +12,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -34,19 +36,20 @@ public class Padrinho implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "ID_PADRINHO")
+    @Column(name = "PADRINHO_ID")
     private Long id;
 
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "DATA_NASCIMENTO")
     private LocalDateTime dataNascimento;
 
-    @NotNull(message = "{validation.notnull}")
+    @NotNull(message = "{validacao.notnull}")
     @Size(max = 15, message = "{validacao.tamanho}")
     @Column(name = "CPF")
     private String cpf;
 
     @NotNull(message = "{validation.notnull}")
-    @Size(max = 45, message = "{validacao.size}")
+    @Size(max = 45, message = "{validacao.tamanho}")
     @Column(name = "NOME")
     private String nome;
 
@@ -54,10 +57,7 @@ public class Padrinho implements Serializable {
     @JoinColumn(name = "ID_CONTATO")
     private Contato contato;
 
-    @ManyToOne
-    @JoinColumn(name = "ID_ENDERECO")
-    private Endereco endereco;
-
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "DATA_CADASTRO")
     private LocalDateTime dataCadastro;
 

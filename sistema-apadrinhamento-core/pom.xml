@@ -92,7 +92,15 @@
 		<dependency>
 			<groupId>org.jboss.ejb3</groupId>
 			<artifactId>jboss-ejb3-ext-api</artifactId>
-		</dependency>        
+		</dependency>
+		     
+		<!-- <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>4.2.2.RELEASE</version>
+		</dependency>
+		    -->
+		    
     </dependencies>
  <build>
         <plugins>

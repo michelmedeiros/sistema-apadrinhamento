@@ -14,15 +14,6 @@
 
   
   <dependencies>
-
-		<dependency>
-			<groupId>br.com.apadrinhamento</groupId>
-			<artifactId>sistema-apadrinhamento-core</artifactId>
-			<version>${project.parent.version}</version>
-			<type>jar</type>
-		</dependency>
-                
-        
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

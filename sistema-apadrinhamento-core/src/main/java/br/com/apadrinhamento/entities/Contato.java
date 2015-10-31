@@ -8,6 +8,8 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -27,22 +29,27 @@ public class Contato implements Serializable {
 
     @Id
     @GeneratedValue
-    @Column(name = "ID_CONTATO")
+    @Column(name = "CONTATO_ID")
     private Long id;
 
-    @NotNull(message = "{validation.notnull}")
+    @NotNull(message = "{validacao.notnull}")
     @Size(max = 45, message = "{validacao.tamanho}")
     @Column(name = "EMAIL")
     private String email;
 
-    @Size(max = 20, message = "{validation.tamanho}")
+    @Size(max = 20, message = "{validacao.tamanho}")
     @Column(name = "TEL_RESIDENCIAL")
     private String telefoneResidencial;
 
-    @NotNull(message = "{validation.notnull}")
+    @NotNull(message = "{validacao.notnull}")
     @Size(max = 20, message = "{validacao.tamanho}")
     @Column(name = "CELULAR")
     private String celular;
+
+    @NotNull(message = "{validacao.notnull}")
+    @Size(max = 100, message = "{validacao.tamanho}")
+    @Column(name = "RESPONS_CONTATO")
+    private String responsavelContato;
 
     @Size(max = 45, message = "{validacao.tamanho}")
     @Column(name = "PROFISSAO")
@@ -56,5 +63,9 @@ public class Contato implements Serializable {
     @NotNull(message = "{validacao.notnull}")
     @Column(name = "HORARIO_CONTATO")
     private HorarioContato horarioContato;
+
+    @OneToOne
+    @JoinColumn(name = "ENDERECO_ID")
+    private Endereco endereco;
 
 }
