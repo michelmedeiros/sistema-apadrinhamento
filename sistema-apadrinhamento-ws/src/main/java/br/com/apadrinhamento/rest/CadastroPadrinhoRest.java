@@ -1,7 +1,7 @@
 package br.com.apadrinhamento.rest;
 
-import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.ws.rs.GET;
@@ -22,8 +22,8 @@ public class CadastroPadrinhoRest {
 	System.out.println("Teste");
 	Padrinho padrinho = new Padrinho();
 	padrinho.setCpf("00887309488");
-	padrinho.setDataNascimento(LocalDateTime.now());
-	padrinho.setDataCadastro(LocalDateTime.now());
+	padrinho.setDataNascimento(Calendar.getInstance());
+	padrinho.setDataCadastro(Calendar.getInstance());
 	padrinhos.add(padrinho);
 
 	return Response.status(Status.OK).entity(padrinho).build();

@@ -1,7 +1,7 @@
 package br.com.apadrinhamento.entities;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Calendar;
 
 import javax.persistence.Column;
 import javax.persistence.Temporal;
@@ -22,10 +22,10 @@ public class BaseEntity implements Serializable {
 
     @Column(name = "DATA_CRIACAO")
     @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime dataCriacao;
+    private Calendar dataCriacao;
 
     @Column(name = "DATA_ATUALIZACAO")
     @Temporal(TemporalType.TIMESTAMP)
-    private LocalDateTime dataAtualizacao;
+    private Calendar dataAtualizacao;
 
 }

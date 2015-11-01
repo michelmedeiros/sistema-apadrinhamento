@@ -2,6 +2,7 @@ package br.com.apadrinhamento.entities;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.Calendar;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -32,11 +33,11 @@ public class Apadrinhamento implements Serializable {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "DATA_INICIO_APADR")
-    private LocalDateTime dataInicioApadrinhamento;
+    private Calendar dataInicioApadrinhamento;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "DATA_FIM_APADR")
-    private LocalDateTime dataFimApadrinhamento;
+    private Calendar dataFimApadrinhamento;
 
     @Column(name = "SIT_APADRINHAMENTO")
     private SituacaoApadrinhamento situacao;

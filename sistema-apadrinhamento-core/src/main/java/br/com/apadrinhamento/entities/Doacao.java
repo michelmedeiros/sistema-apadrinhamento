@@ -2,7 +2,7 @@ package br.com.apadrinhamento.entities;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.Calendar;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -34,7 +34,7 @@ public class Doacao implements Serializable {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "DATA_DOACAO")
-    private LocalDateTime dataNascimento;
+    private Calendar dataNascimento;
 
     @NotNull(message = "{validacao.notnull}")
     @Column(name = "VALOR_DOACAO")

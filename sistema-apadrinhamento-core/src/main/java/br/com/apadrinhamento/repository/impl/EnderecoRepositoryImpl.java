@@ -1,11 +1,13 @@
 package br.com.apadrinhamento.repository.impl;
 
+import javax.enterprise.context.Dependent;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import br.com.apadrinhamento.entities.Endereco;
 import br.com.apadrinhamento.repository.EnderecoRepository;
 
+@Dependent
 public class EnderecoRepositoryImpl implements EnderecoRepository {
 
     @PersistenceContext(unitName = "ApadrinhamentoPU")

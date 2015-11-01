@@ -1,13 +1,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <artifactId>sistema-apadrinhamento-core</artifactId>
+  <name>Sistema de Apadrinhamento Core</name>
+  <description>Sistema de Apadrinhamento Core</description>
   <parent>
     <groupId>br.com.apadrinhamento</groupId>
     <artifactId>sistema-apadrinhamento</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>sistema-apadrinhamento-core</artifactId>
-  <name>Sistema de Apadrinhamento Core</name>
-  <description>Sistema de Apadrinhamento Core</description>
+
   
    <dependencies>
 
@@ -93,14 +94,7 @@
 			<groupId>org.jboss.ejb3</groupId>
 			<artifactId>jboss-ejb3-ext-api</artifactId>
 		</dependency>
-		     
-		<!-- <dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<version>4.2.2.RELEASE</version>
-		</dependency>
-		    -->
-		    
+		
     </dependencies>
  <build>
         <plugins>

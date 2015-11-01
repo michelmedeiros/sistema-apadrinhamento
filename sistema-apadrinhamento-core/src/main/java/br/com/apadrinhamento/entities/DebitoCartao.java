@@ -1,7 +1,7 @@
 package br.com.apadrinhamento.entities;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Calendar;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,9 +15,9 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+import br.com.apadrinhamento.enumerations.BandeiraCartao;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import br.com.apadrinhamento.enumerations.BandeiraCartao;
 
 @Data
 @NoArgsConstructor
@@ -48,9 +48,9 @@ public class DebitoCartao implements Serializable {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "DATA_VALIDADE")
-    private LocalDateTime dataValidade;
+    private Calendar dataValidade;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "DATA_FATURAMENTO")
-    private LocalDateTime dataFaturamento;
+    private Calendar dataFaturamento;
 }

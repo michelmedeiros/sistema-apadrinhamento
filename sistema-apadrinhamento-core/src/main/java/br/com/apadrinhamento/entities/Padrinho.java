@@ -1,7 +1,7 @@
 package br.com.apadrinhamento.entities;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -41,7 +41,7 @@ public class Padrinho implements Serializable {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "DATA_NASCIMENTO")
-    private LocalDateTime dataNascimento;
+    private Calendar dataNascimento;
 
     @NotNull(message = "{validacao.notnull}")
     @Size(max = 15, message = "{validacao.tamanho}")
@@ -59,7 +59,7 @@ public class Padrinho implements Serializable {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "DATA_CADASTRO")
-    private LocalDateTime dataCadastro;
+    private Calendar dataCadastro;
 
     @OneToMany(mappedBy = "padrinho")
     private List<Apadrinhamento> apadrinhamentos;

@@ -1,5 +1,6 @@
 package br.com.apadrinhamento.services.impl;
 
+import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -10,10 +11,11 @@ import br.com.apadrinhamento.entities.Endereco;
 import br.com.apadrinhamento.repository.EnderecoRepository;
 import br.com.apadrinhamento.services.EnderecoService;
 
+@Stateless
 public class EnderecoServiceImpl implements EnderecoService {
 
     @Inject
-    private EnderecoRepository repository;
+    private EnderecoRepository enderecoRepository;
 
     private EntityManagerFactory emf;
     private EntityManager em;
@@ -21,7 +23,7 @@ public class EnderecoServiceImpl implements EnderecoService {
     @Override
     @Transactional
     public Endereco salvarEndereco(Endereco endereco) {
-	return repository.salvarEndereco(endereco);
+	return enderecoRepository.salvarEndereco(endereco);
     }
 
     public void startConnection() {

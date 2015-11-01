@@ -181,6 +181,14 @@
 
 		</dependencies>
 	</dependencyManagement>
+
+    <scm>
+        <connection>scm:git:https://github.com/michelmedeiros/sistema-apadrinhamento.git</connection>
+        <developerConnection>scm:git:https://github.com/michelmedeiros/sistema-apadrinhamento.git</developerConnection>
+        <url>https://github.com/michelmedeiros/sistema-apadrinhamento</url>
+        <tag>HEAD</tag>
+    </scm>	
+	
   <build>
     <finalName>${project.artifactId}</finalName>
     <resources>
