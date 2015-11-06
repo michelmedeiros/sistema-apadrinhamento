@@ -1,0 +1,98 @@
+<div class="jumbotron">
+  <p class="lead">
+    <img src="images/children-icon.png" alt="I'm Yeoman"><br>
+    Sistema de Apadrinhamento de Crianças
+  </p> 
+  <h3>Cadastro de Padrinhos</h1>
+	<form name="formPadrinho" class="form-horizontal" role="form">
+	<div class="panel panel-primary">
+	  <div class="panel-heading">
+	  	<h3 class="panel-title">Dados Pessoais</h3>
+	  </div>
+	  <div class="panel-body">
+		  <div class="form-group">
+		    <label for="inputNome" class="col-sm-4 control-label">Nome</label>
+		    <div class="col-sm-8">
+		      <input type="text" class="form-control" id="inputNome" placeholder="Nome" required>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="inputSobrenome" class="col-sm-4 control-label">Sobrenome</label>
+		    <div class="col-sm-8">
+		      <input type="text" class="form-control" id="inputSobrenome" placeholder="Sobrenome" required>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		  	<label for="inputCpf" class="col-sm-4 control-label">CPF</label>
+		  	<div class="col-sm-8">
+		  		<input type="text" class="form-control" id="inputCpf" placeholder="CPF" required>
+		  	</div>
+		  </div>
+		  <div class="form-group">
+		  	<label for="inputData" class="col-sm-4 control-label">Data Nascimento</label>
+		  	<div class="col-sm-8">
+		  		<input type="date" class="form-control" id="inputData" required>
+		  	</div>
+		  </div>	
+	  </div>
+	</div>
+	<div class="panel panel-primary">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Informações de Contato</h3>
+	  </div>
+	  <div class="panel-body">
+		  <div class="form-group">
+		    <label for="inputEmail" class="col-sm-4 control-label">Email</label>
+		    <div class="col-sm-8">
+		    	<input type="email" class="form-control" id="inputEmail" placeholder="Email" data-error="Endereço de Email inválido." required>
+		    </div>	
+		    <div class="help-block with-errors"></div>
+		  </div>
+	    <div class="form-group">
+		    <label for="inputTelefone" class="col-sm-4 control-label">Telefone</label>
+		    <div class="col-sm-8">
+		    	<input type="text" class="form-control" id="inputTelefone" ng-model="ctrl.model.padrinho.telefone" ui-mask="99 9999-999?9">
+		    </div>	
+		  </div>
+		  <div class="form-group">
+		    <label for="inputCelular" class="col-sm-4 control-label">Celular</label>
+		    <div class="col-sm-8">
+		    	<input type="text" class="form-control" id="inputCelular" ng-model="ctrl.model.padrinho.celular" ui-mask="99 99999-999?9" required>
+		    </div>	
+		  </div>
+			<div class="form-group">
+		    <label for="inputResponsavel" class="col-sm-4 control-label">Responsável</label>
+		    <div class="col-sm-8">
+		    	<input type="text" class="form-control" id="inputResponsavel" ng-model="ctrl.model.padrinho.responsavel">
+		    </div>	
+		  </div>
+		  <div class="form-group">  
+		    <label for="inputProfissao" class="col-sm-4 control-label">Profissão</label>
+		    <div class="col-sm-8">
+		    	<input type="text" class="form-control" id="inputProfissao" ng-model="ctrl.model.padrinho.profissao">
+		    </div>	
+		  </div>
+		</div>
+  </div>		
+
+	<button id="btnSalvar" type="submit" class="btn btn-success btn-s" ng-disabled="formPadrinho.$invalid">Salvar</button>
+		  <!-- Avaliar uso com enuns
+		  <div class="form-group">
+			  <label class="col-sm-4 control-label" for="selectFormaContato"></label>
+			  <div class="col-sm-8">
+	        <ui-select ng-model="ctrl.model.padrinho.formaContato" theme="bootstrap">
+	          <ui-select-match>{{ctrl.model.padrinho.formaContato.descricao}}</ui-select-match>
+	          <ui-select-choices
+	            repeat="formaContato in ctrl.model.formaContato | propsFilter: {descricao: $select.search} | orderBy:'descricao'">
+	            <span ng-bind-html="formaContato.descricao | highlight: $select.search"/>
+	          </ui-select-choices>
+	        </ui-select>
+	      </div>  
+		  </div>
+		</div>
+		-->  
+	</form>
+</div>
+
+
+

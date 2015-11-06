@@ -13,7 +13,7 @@
  
         <!-- Não se esqueça de informar ao persistence.xml qual datasource você estará usando, para isso siga o exemplo abaixo: -->
         <jta-data-source>java:jboss/datasources/apadrinhamento-ds</jta-data-source>
-        <!-- Obs.: Caso seja necessário você rodar uma classe main para popular o banco de dados, remova a tag acima. -->
+        <!-- Obs.: Caso seja necessário você rodar uma classe main para popular o banco de dados, remova a tag acima.--> 
  
 		<class>br.com.atendimento.entidades.Padrinho</class>
 		<class>br.com.atendimento.entidades.Crianca</class>

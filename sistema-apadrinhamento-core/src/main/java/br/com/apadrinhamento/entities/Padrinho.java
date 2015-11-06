@@ -52,6 +52,11 @@ public class Padrinho implements Serializable {
     @Size(max = 45, message = "{validacao.tamanho}")
     @Column(name = "NOME")
     private String nome;
+    
+    @NotNull(message = "{validation.notnull}")
+    @Size(max = 45, message = "{validacao.tamanho}")
+    @Column(name = "SOBRENOME")
+    private String sobrenome;
 
     @ManyToOne
     @JoinColumn(name = "ID_CONTATO")
