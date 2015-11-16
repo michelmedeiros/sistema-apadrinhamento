@@ -15,23 +15,16 @@
         <jta-data-source>java:jboss/datasources/apadrinhamento-ds</jta-data-source>
         <!-- Obs.: Caso seja necessário você rodar uma classe main para popular o banco de dados, remova a tag acima.--> 
  
-		<class>br.com.atendimento.entidades.Padrinho</class>
-		<class>br.com.atendimento.entidades.Crianca</class>
-		<class>br.com.atendimento.entidades.Contato</class>
-		<class>br.com.atendimento.entidades.Doacao</class>
-		<class>br.com.atendimento.entidades.Endereco</class>
-		<class>br.com.atendimento.entidades.DebitoAutomatico</class>
-		<class>br.com.atendimento.entidades.DebitoCartao</class>
+ 		<class>br.com.apadrinhamento.entities.Apadrinhamento</class>
+		<class>br.com.apadrinhamento.entities.Padrinho</class>
+		<class>br.com.apadrinhamento.entities.Crianca</class>
+		<class>br.com.apadrinhamento.entities.Contato</class>
+		<class>br.com.apadrinhamento.entities.Doacao</class>
+		<class>br.com.apadrinhamento.entities.Endereco</class>
+		<class>br.com.apadrinhamento.entities.DebitoAutomatico</class>
+		<class>br.com.apadrinhamento.entities.DebitoCartao</class>
  
         <properties>
-            <!-- Uma vez que você está usando datasource não é necessário configurar novamente o acesso ao banco -->
-            <!-- Coloquei aqui apenas como um exemplo 
-            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/livraria" />
-            <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="root" />
-            <property name="javax.persistence.validation.mode" value="none" />
-            -->
             <property name="hibernate.hbm2ddl.auto" value="update" />
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
