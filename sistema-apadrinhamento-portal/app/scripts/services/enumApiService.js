@@ -10,18 +10,15 @@
       return [
       {
         descricao: 'Email',
-        valor: '0',
-        classLabel:'label-primary'
+        valor: '0'
       }, 
       {
         descricao: 'Internet',
-        valor: '1',
-        classLabel:'label-success'
+        valor: '1'
       },
       {
         descricao: 'TV',
-        valor: '2',
-        classLabel:'label-success'
+        valor: '2'
       }
       ];
     };
@@ -30,18 +27,15 @@
       return [
       {
         descricao: 'Manhã',
-        valor: '0',
-        classLabel:'label-primary'
+        valor: '0'
       }, 
       {
         descricao: 'Tarde',
-        valor: '1',
-        classLabel:'label-success'
+        valor: '1'
       },
       {
         descricao: 'Noite',
-        valor: '2',
-        classLabel:'label-success'
+        valor: '2'
       }
       ];
     };    

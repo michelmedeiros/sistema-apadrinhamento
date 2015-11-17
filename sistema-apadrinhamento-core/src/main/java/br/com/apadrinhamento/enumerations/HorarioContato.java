@@ -6,19 +6,10 @@ import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 @JsonFormat(shape = Shape.OBJECT)
 public enum HorarioContato {
 
-    MANHA("Manhã"),
+    MANHA(),
 
-    TARDE("Tarde"),
+    TARDE(),
 
-    NOITE("Noite");
+    NOITE();
 
-    private String descricao;
-
-    HorarioContato(String descricao){
-	this.descricao = descricao;
-    }
-
-    public String getDescricao(){
-	return this.descricao;
-    }
 }

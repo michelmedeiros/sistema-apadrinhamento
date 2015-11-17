@@ -74,7 +74,7 @@
             <ui-select ng-model="ctrl.model.formaContatoSelecionado" theme="bootstrap">
               <ui-select-match>{{ctrl.model.formaContatoSelecionado.descricao}}</ui-select-match>
               <ui-select-choices repeat="formaContato in ctrl.model.formasContato | filter: {descricao: $select.search} | orderBy:'descricao'">
-                <span class="formaContato.classLabel" ng-bind-html="formaContato.descricao | highlight: $select.search" />
+                <span ng-bind-html="formaContato.descricao | highlight: $select.search" />
               </ui-select-choices>
             </ui-select>
           </div>
@@ -86,7 +86,7 @@
               <ui-select-match>{{ctrl.model.horarioSelecionado.descricao}}</ui-select-match>
               <ui-select-choices repeat="horarioContato in ctrl.model.horariosContato 
 	          	| filter: {descricao: $select.search}">
-                <span class="horarioContato.classLabel" ng-bind-html="horarioContato.descricao | highlight: $select.search" />
+                <span ng-bind-html="horarioContato.descricao | highlight: $select.search" />
               </ui-select-choices>
             </ui-select>
           </div>
